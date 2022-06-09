@@ -12,15 +12,13 @@ import lombok.NoArgsConstructor;
 public class AccountDetailsDTO {
 
     @PrimaryCacheKey
-    UUID id;
-    String name;
-    String email;
+    UUID accountId;
+    UUID ownerId;
 
     @EventHandler
     public void on(AccountCreatedEvent event) {
-        this.id = event.getId();
-        this.name = event.getName();
-        this.email = event.getEmail();
+        this.accountId = event.getAccountId();
+        this.ownerId = event.getOwnerId();
     }
 
 }

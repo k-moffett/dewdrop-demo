@@ -4,8 +4,8 @@ import com.dewdrop.aggregate.annotation.Aggregate;
 import com.dewdrop.aggregate.annotation.AggregateId;
 import com.dewdrop.command.CommandHandler;
 import com.dewdrop.read.readmodel.annotation.EventHandler;
-import com.example.demo.commons.write.account.event.AccountCreatedEvent;
 import com.example.demo.commons.write.account.command.CreateAccountCommand;
+import com.example.demo.commons.write.account.event.AccountCreatedEvent;
 import java.util.List;
 import java.util.UUID;
 import lombok.Data;
@@ -15,21 +15,23 @@ import lombok.Data;
 public class AccountAggregate {
 
     @AggregateId
-    UUID id;
-    String name;
-    String email;
+    UUID accountId;
+    UUID ownerID;
+    List<UUID> adminUserIds;
+    List<UUID> userIds;
 
     public AccountAggregate() {}
 
     @CommandHandler
-    public List<AccountCreatedEvent> handle(CreateAccountCommand command) {
-        return List.of(new AccountCreatedEvent(command.getId(), command.getName(), command.getEmail()));
+    public AccountCreatedEvent handle(CreateAccountCommand command) {
+        return new AccountCreatedEvent(command.getAccountId(), command.getOwnerId(), command.getAdminUserIds(), command.getUserIds());
     }
 
     @EventHandler
     public void on(AccountCreatedEvent event) {
-        this.id = event.getId();
-        this.name = event.getName();
-        this.email = event.getEmail();
+        this.accountId = event.getAccountId();
+        this.ownerID = event.getOwnerId();
+        this.adminUserIds = event.getAdminUserIds();
+        this.userIds = event.getUserIds();
     }
 }
