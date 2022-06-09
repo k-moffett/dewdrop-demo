@@ -1,4 +1,4 @@
-package com.example.demo.commons.read.account.accountdetails;
+package com.example.demo.data.read.account.accountdetails;
 
 import com.dewdrop.api.result.Result;
 import com.dewdrop.read.readmodel.annotation.DewdropCache;

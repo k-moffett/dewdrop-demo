@@ -1,4 +1,4 @@
-package com.example.demo.commons.write.user.event;
+package com.example.demo.data.write.user.event;
 
 import com.dewdrop.aggregate.annotation.AggregateId;
 import com.dewdrop.read.readmodel.annotation.CreationEvent;

@@ -1,8 +1,8 @@
 package com.example.demo.usecase.user.get;
 
 import com.dewdrop.api.result.ResultException;
-import com.example.demo.commons.read.user.GetUserDetailsByIdQuery;
-import com.example.demo.commons.read.user.UserDetailsDTO;
+import com.example.demo.data.read.user.GetUserDetailsByIdQuery;
+import com.example.demo.data.read.user.UserDetailsDTO;
 import com.example.demo.usecase.user.AbstractUserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

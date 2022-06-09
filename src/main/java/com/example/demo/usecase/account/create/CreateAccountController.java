@@ -1,6 +1,6 @@
 package com.example.demo.usecase.account.create;
 
-import com.example.demo.commons.write.account.command.CreateAccountCommand;
+import com.example.demo.data.write.account.command.CreateAccountCommand;
 import com.example.demo.usecase.account.AbstractAccountController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

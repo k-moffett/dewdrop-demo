@@ -1,4 +1,4 @@
-package com.example.demo.commons.write.user.command;
+package com.example.demo.data.write.user.command;
 
 import com.dewdrop.aggregate.annotation.AggregateId;
 import com.dewdrop.structure.api.Command;

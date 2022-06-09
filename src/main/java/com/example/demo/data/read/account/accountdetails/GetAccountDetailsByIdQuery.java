@@ -1,4 +1,4 @@
-package com.example.demo.commons.read.user;
+package com.example.demo.data.read.account.accountdetails;
 
 import java.util.UUID;
 import lombok.AllArgsConstructor;
@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class GetUserDetailsByIdQuery {
+public class GetAccountDetailsByIdQuery {
 
     private UUID id;
 }

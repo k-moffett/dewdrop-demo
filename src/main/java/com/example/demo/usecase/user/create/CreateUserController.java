@@ -1,6 +1,6 @@
 package com.example.demo.usecase.user.create;
 
-import com.example.demo.commons.write.user.command.CreateUserCommand;
+import com.example.demo.data.write.user.command.CreateUserCommand;
 import com.example.demo.usecase.user.AbstractUserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

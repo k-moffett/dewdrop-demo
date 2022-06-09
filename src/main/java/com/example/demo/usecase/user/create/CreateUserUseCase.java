@@ -1,7 +1,7 @@
 package com.example.demo.usecase.user.create;
 
 import com.dewdrop.Dewdrop;
-import com.example.demo.commons.write.user.command.CreateUserCommand;
+import com.example.demo.data.write.user.command.CreateUserCommand;
 import java.net.URI;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;

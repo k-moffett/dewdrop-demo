@@ -1,4 +1,4 @@
-package com.example.demo.commons.read.user;
+package com.example.demo.data.read.user;
 
 import com.dewdrop.api.result.Result;
 import com.dewdrop.read.readmodel.annotation.DewdropCache;

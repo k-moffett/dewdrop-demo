@@ -1,9 +1,8 @@
-package com.example.demo.commons.read.user;
+package com.example.demo.data.read.user;
 
 import com.dewdrop.read.readmodel.annotation.EventHandler;
 import com.dewdrop.read.readmodel.annotation.PrimaryCacheKey;
-import com.example.demo.commons.write.account.event.AccountCreatedEvent;
-import com.example.demo.commons.write.user.event.UserCreatedEvent;
+import com.example.demo.data.write.user.event.UserCreatedEvent;
 import java.util.UUID;
 import lombok.Data;
 import lombok.NoArgsConstructor;

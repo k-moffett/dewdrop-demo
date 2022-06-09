@@ -1,11 +1,11 @@
-package com.example.demo.commons.aggregate;
+package com.example.demo.data.aggregate;
 
 import com.dewdrop.aggregate.annotation.Aggregate;
 import com.dewdrop.aggregate.annotation.AggregateId;
 import com.dewdrop.command.CommandHandler;
 import com.dewdrop.read.readmodel.annotation.EventHandler;
-import com.example.demo.commons.write.user.command.CreateUserCommand;
-import com.example.demo.commons.write.user.event.UserCreatedEvent;
+import com.example.demo.data.write.user.command.CreateUserCommand;
+import com.example.demo.data.write.user.event.UserCreatedEvent;
 import java.util.List;
 import java.util.UUID;
 import lombok.Data;
