@@ -1,12 +1,11 @@
-package com.example.demo.data.aggregate;
+package com.example.demo.commons.aggregate;
 
 import com.dewdrop.aggregate.annotation.Aggregate;
 import com.dewdrop.aggregate.annotation.AggregateId;
 import com.dewdrop.command.CommandHandler;
 import com.dewdrop.read.readmodel.annotation.EventHandler;
-import com.dewdrop.read.readmodel.annotation.PrimaryCacheKey;
-import com.example.demo.api.account.create.AccountCreatedEvent;
-import com.example.demo.api.account.create.CreateAccountCommand;
+import com.example.demo.commons.write.account.event.AccountCreatedEvent;
+import com.example.demo.commons.write.account.command.CreateAccountCommand;
 import java.util.List;
 import java.util.UUID;
 import lombok.Data;
@@ -15,7 +14,6 @@ import lombok.Data;
 @Aggregate
 public class AccountAggregate {
 
-    @PrimaryCacheKey
     @AggregateId
     UUID id;
     String name;

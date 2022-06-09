@@ -1,26 +1,25 @@
-package com.example.demo.data.read.account;
+package com.example.demo.commons.read.account.accountdetails;
 
 import com.dewdrop.api.result.Result;
 import com.dewdrop.read.readmodel.annotation.DewdropCache;
 import com.dewdrop.read.readmodel.annotation.ReadModel;
 import com.dewdrop.read.readmodel.annotation.Stream;
 import com.dewdrop.read.readmodel.query.QueryHandler;
-import com.example.demo.data.aggregate.AccountAggregate;
 import java.util.Map;
 import java.util.UUID;
 
-@ReadModel(resultClass = AccountAggregate.class)
+@ReadModel(resultClass = AccountDetailsDTO.class)
 @Stream(name = "AccountAggregate")
 @Stream(name = "AccountAggregate", subscribed = false)
-public class AccountReadModel {
+public class AccountDetailsReadModel {
 
     @DewdropCache
-    Map<UUID, AccountAggregate> cache;
+    Map<UUID, AccountDetailsDTO> cache;
 
     @QueryHandler
-    public Result<AccountAggregate> handle(GetAccountByIdQuery query) {
-        AccountAggregate account = cache.get(query.getId());
-        if (account != null) {return Result.of(account);}
+    public Result<AccountDetailsDTO> handle(GetAccountDetailsByIdQuery query) {
+        AccountDetailsDTO accountDetailsDTO = cache.get(query.getId());
+        if (accountDetailsDTO != null) {return Result.of(accountDetailsDTO);}
         return Result.empty();
     }
 }

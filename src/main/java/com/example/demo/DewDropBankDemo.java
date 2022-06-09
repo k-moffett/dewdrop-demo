@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DewDropBankDemo {
 
     public static void main(String[] args) {
-        DewdropConfig.getInstance();
         SpringApplication.run(DewDropBankDemo.class, args);
     }
 

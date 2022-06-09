@@ -1,4 +1,4 @@
-package com.example.demo.api.account.create;
+package com.example.demo.commons.write.account.event;
 
 import com.dewdrop.aggregate.annotation.AggregateId;
 import com.dewdrop.read.readmodel.annotation.CreationEvent;

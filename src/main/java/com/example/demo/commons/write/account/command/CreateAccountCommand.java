@@ -1,4 +1,4 @@
-package com.example.demo.api.account.create;
+package com.example.demo.commons.write.account.command;
 
 import com.dewdrop.aggregate.annotation.AggregateId;
 import com.dewdrop.structure.api.Command;
